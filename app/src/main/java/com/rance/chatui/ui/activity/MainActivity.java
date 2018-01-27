@@ -38,7 +38,7 @@ import org.greenrobot.eventbus.ThreadMode;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -47,23 +47,23 @@ import butterknife.ButterKnife;
  */
 public class MainActivity extends AppCompatActivity {
 
-    @Bind(R.id.chat_list)
+    @BindView(R.id.chat_list)
     EasyRecyclerView chatList;
-    @Bind(R.id.emotion_voice)
+    @BindView(R.id.emotion_voice)
     ImageView emotionVoice;
-    @Bind(R.id.edit_text)
+    @BindView(R.id.edit_text)
     EditText editText;
-    @Bind(R.id.voice_text)
+    @BindView(R.id.voice_text)
     TextView voiceText;
-    @Bind(R.id.emotion_button)
+    @BindView(R.id.emotion_button)
     ImageView emotionButton;
-    @Bind(R.id.emotion_add)
+    @BindView(R.id.emotion_add)
     ImageView emotionAdd;
-    @Bind(R.id.emotion_send)
+    @BindView(R.id.emotion_send)
     StateButton emotionSend;
-    @Bind(R.id.viewpager)
+    @BindView(R.id.viewpager)
     NoScrollViewPager viewpager;
-    @Bind(R.id.emotion_layout)
+    @BindView(R.id.emotion_layout)
     RelativeLayout emotionLayout;
 
     private EmotionInputDetector mDetector;
@@ -273,7 +273,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        ButterKnife.unbind(this);
         EventBus.getDefault().removeStickyEvent(this);
         EventBus.getDefault().unregister(this);
     }

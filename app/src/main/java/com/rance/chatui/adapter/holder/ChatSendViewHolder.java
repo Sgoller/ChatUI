@@ -18,7 +18,7 @@ import com.rance.chatui.util.Utils;
 import com.rance.chatui.widget.BubbleImageView;
 import com.rance.chatui.widget.GifTextView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -27,23 +27,23 @@ import butterknife.ButterKnife;
  */
 public class ChatSendViewHolder extends BaseViewHolder<MessageInfo> {
 
-    @Bind(R.id.chat_item_date)
+    @BindView(R.id.chat_item_date)
     TextView chatItemDate;
-    @Bind(R.id.chat_item_header)
+    @BindView(R.id.chat_item_header)
     ImageView chatItemHeader;
-    @Bind(R.id.chat_item_content_text)
+    @BindView(R.id.chat_item_content_text)
     GifTextView chatItemContentText;
-    @Bind(R.id.chat_item_content_image)
+    @BindView(R.id.chat_item_content_image)
     BubbleImageView chatItemContentImage;
-    @Bind(R.id.chat_item_fail)
+    @BindView(R.id.chat_item_fail)
     ImageView chatItemFail;
-    @Bind(R.id.chat_item_progress)
+    @BindView(R.id.chat_item_progress)
     ProgressBar chatItemProgress;
-    @Bind(R.id.chat_item_voice)
+    @BindView(R.id.chat_item_voice)
     ImageView chatItemVoice;
-    @Bind(R.id.chat_item_layout_content)
+    @BindView(R.id.chat_item_layout_content)
     LinearLayout chatItemLayoutContent;
-    @Bind(R.id.chat_item_voice_time)
+    @BindView(R.id.chat_item_voice_time)
     TextView chatItemVoiceTime;
     private ChatAdapter.onItemClickListener onItemClickListener;
     private Handler handler;
